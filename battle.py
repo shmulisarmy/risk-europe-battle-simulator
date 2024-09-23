@@ -31,7 +31,7 @@ class Battle:
 
         self()
     def end(self, winner: Player):
-        print(f"\n***************** {winner.name} wins *****************\n")
+        # print(f"\n***************** {winner.name} wins *****************\n")
         self.winner = winner
         self.active = False
         self.attacker = None
@@ -62,10 +62,10 @@ class Battle:
     def special_attackers_part_of_round(self) -> bool:
         for current_attacking_troop in special_attack_order:
             number_needed_to_attack: int = special_attack_kind[current_attacking_troop]["on roll"]
-            print(red(f"\n***************** {current_attacking_troop} attacking *****************\n"))
-            print(yellow(f"a {number_needed_to_attack} or higher roll is needed to attack"))
+            # print(red(f"\n***************** {current_attacking_troop} attacking *****************\n"))
+            # print(yellow(f"a {number_needed_to_attack} or higher roll is needed to attack"))
             for current_attacking_player in self.fighting_players:
-                print(f"\n{current_attacking_player.name} is attacking with {current_attacking_player.troops[current_attacking_troop]} {current_attacking_troop}'s\n")
+                # print(f"\n{current_attacking_player.name} is attacking with {current_attacking_player.troops[current_attacking_troop]} {current_attacking_troop}'s\n")
                 current_attacking_player: Player
                 troop_dice_roll_amount: int = special_attack_kind[current_attacking_troop]["max strike count"]
                 total_troop_dice_roll_amount: int = troop_dice_roll_amount*current_attacking_player.troops[current_attacking_troop]
@@ -92,7 +92,7 @@ class Battle:
         return True
         
     def __call__(self):
-        print(f"\n***************** {self.player_1.name} vs {self.player_2.name} *****************\n")
+        # print(f"\n***************** {self.player_1.name} vs {self.player_2.name} *****************\n")
         while self.player_1.has_troops() and self.player_2.has_troops():
             self.round_upto += 1
             self.round()
@@ -124,16 +124,18 @@ class Battle:
 
     def display(self):
         if self.active:
-            print(f"\n***************** round {self.round_upto} *****************\n")
+            # print(f"\n***************** round {self.round_upto} *****************\n")
 
-            print("Attacker: ", end="")
+            # print("Attacker: ", end="")
             self.attacker.display()
-            print("Defender: ", end="")
+            # print("Defender: ", end="")
             self.defender.display()
         elif self.winner:
-            print(f"{self.winner.name} wins")
+            pass
+            # print(f"{self.winner.name} wins")
         else:
-            print("Battle has not started yet")
+            # print("Battle has not started yet")
+            pass
 
 
    

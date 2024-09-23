@@ -21,7 +21,8 @@ class Player:
         return f"{self.name}: {self.troops}"
     
     def display(self):
-        print(self.toString())
+        pass
+        # print(self.toString())
     
     def lose_troops(self, troops_left_to_lose: int) -> bool:
         """returns True if the player was able to lose the required number of troops"""
@@ -35,7 +36,7 @@ class Player:
             troops_able_to_be_lost: int = min(self.troops[current_troop], troops_left_to_lose)
 
 
-            print(f"{self.name} lost {troops_able_to_be_lost} {current_troop}'s")
+            # print(f"{self.name} lost {troops_able_to_be_lost} {current_troop}'s")
             self.troops[current_troop] -= troops_able_to_be_lost
             troops_left_to_lose -= troops_able_to_be_lost
 
@@ -64,7 +65,7 @@ class Player:
         dice_roll: int = randint(1, 6)
         self.all_rolls.append(dice_roll)
         incode_color: Callable = colors[dice_roll-1]
-        print(f"{self.name} rolled {incode_color(dice_roll)}")
+        # print(f"{self.name} rolled {incode_color(dice_roll)}")
         return dice_roll
     
     def has_troops(self):
