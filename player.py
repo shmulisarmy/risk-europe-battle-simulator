@@ -1,3 +1,4 @@
+from typing import Callable
 from random import randint
 from settings import troop_ranking_reversed, troop_value
 from utils import colors, average, next_or_none
@@ -62,7 +63,7 @@ class Player:
     def roll_dice(self):
         dice_roll: int = randint(1, 6)
         self.all_rolls.append(dice_roll)
-        incode_color: function = colors[dice_roll-1]
+        incode_color: Callable = colors[dice_roll-1]
         print(f"{self.name} rolled {incode_color(dice_roll)}")
         return dice_roll
     
