@@ -104,7 +104,7 @@ class Battle:
             self.end(winner=self.player_2)
 
 
-    def test_status_synce(self):
+    def test_status_sync(self):
         """even if false is returned, it could be do to the\n
         fact that a status transition is happening now \n
         and not a logic error""" 
@@ -118,6 +118,8 @@ class Battle:
         else:
             if self.attacker or self.defender:
                 return False
+            
+        return True
 
 
     def display(self):
