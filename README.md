@@ -2,7 +2,7 @@
 
 
 ### run command
-bash```
+```bash
 
 python3 main.py
 
