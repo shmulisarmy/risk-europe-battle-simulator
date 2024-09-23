@@ -1,11 +1,5 @@
 from player import Player
-from settings import special_attack_order, special_attack_kind
-from utils import red, green, yellow, blue, magenta, cyan
 from battle import Battle
-
-
-
-
 
 
 player_1_troops = {
