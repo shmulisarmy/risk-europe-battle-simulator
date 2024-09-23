@@ -8,5 +8,6 @@ python3 main.py
 
 ```
 
-![playthrough example][images/playthrough_example.png]
+![playthrough example](images/playthrough_example.png)
+
 
